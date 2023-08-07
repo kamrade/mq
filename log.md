@@ -1,7 +1,9 @@
 + Init ts react project
 + Add sass
 + Setup absolute path (https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite)
+
 - setup Routes
+
 - Add Bootstrap or Tailwind
 - classnames
 - React icons
