@@ -1,0 +1,36 @@
+@import "src/styles/global";
+
+.Header {
+  position: relative;
+  font-family: $font-family-sans-serif-heading;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .75rem;
+  padding-top: 3rem;
+  margin-bottom: 180px;
+}
+
+.Menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: flex-start;
+  }
+
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.Title {
+  display: flex;
+  justify-content: space-between;
+  .Description {
+    font-size: 1rem;
+    color: $color-text-base;
+  }
+}

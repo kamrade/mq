@@ -1,0 +1,154 @@
+@import './colors.module.scss';
+
+// TEXT
+$color-text-base: map-get($theme-base, textMain);
+$color-text-base-label: map-get($theme-base, textLabel);
+$color-text-base-muted: map-get($theme-base, textMuted);
+$color-text-base-placeholder: map-get($theme-base, textPlaceholder);
+$color-text-base-disabled: map-get($theme-base, textDisabled);
+
+$color-text-primary: map-get($theme-primary, textMain);
+$color-text-primary-muted: map-get($theme-primary, textMuted);
+$color-text-primary-disabled: map-get($theme-primary, textDisabled);
+$color-text-link: $color-text-primary;
+
+$color-text-success: map-get($theme-success, textMain);
+$color-text-success-muted: map-get($theme-success, textMuted);
+$color-text-success-disabled: map-get($theme-success, textDisabled);
+
+$color-text-danger: map-get($theme-danger, textMain);
+$color-text-danger-muted: map-get($theme-danger, textMuted);
+$color-text-danger-disabled: map-get($theme-danger, textDisabled);
+
+$color-text-warning: map-get($theme-warning, textMain);
+$color-text-warning-muted: map-get($theme-warning, textMuted);
+$color-text-warning-disabled: map-get($theme-warning, textDisabled);
+
+// BACKGROUND
+$color-bg-base-100: map-get($theme-base, bg100);
+$color-bg-base-200: map-get($theme-base, bg200);
+$color-bg-base-300: map-get($theme-base, bg300);
+
+$color-bg-base-700: map-get($theme-base, bg700);
+$color-bg-base-800: map-get($theme-base, bg800);
+$color-bg-base-900: map-get($theme-base, bg900);
+
+$color-bg-primary-100: map-get($theme-primary, bg100);
+$color-bg-primary-200: map-get($theme-primary, bg200);
+$color-bg-primary-300: map-get($theme-primary, bg300);
+
+$color-bg-primary-700: map-get($theme-primary, bg700);
+$color-bg-primary-800: map-get($theme-primary, bg800);
+$color-bg-primary-900: map-get($theme-primary, bg900);
+
+$color-bg-success-100: map-get($theme-success, bg100);
+$color-bg-success-200: map-get($theme-success, bg200);
+$color-bg-success-300: map-get($theme-success, bg300);
+
+$color-bg-success-700: map-get($theme-success, bg700);
+$color-bg-success-800: map-get($theme-success, bg800);
+$color-bg-success-900: map-get($theme-success, bg900);
+
+$color-bg-danger-100: map-get($theme-danger, bg100);
+$color-bg-danger-200: map-get($theme-danger, bg200);
+$color-bg-danger-300: map-get($theme-danger, bg300);
+
+$color-bg-danger-700: map-get($theme-danger, bg700);
+$color-bg-danger-800: map-get($theme-danger, bg800);
+$color-bg-danger-900: map-get($theme-danger, bg900);
+
+$color-bg-warning-100: map-get($theme-warning, bg100);
+$color-bg-warning-200: map-get($theme-warning, bg200);
+$color-bg-warning-300: map-get($theme-warning, bg300);
+
+$color-bg-warning-700: map-get($theme-warning, bg700);
+$color-bg-warning-800: map-get($theme-warning, bg800);
+$color-bg-warning-900: map-get($theme-warning, bg900);
+
+// LINEs
+$color-line-base:    map-get($theme-base, outline);
+$color-line-primary: map-get($theme-primary, outline);
+$color-line-success: map-get($theme-success, outline);
+$color-line-danger:  map-get($theme-danger, outline);
+$color-line-warning: map-get($theme-warning, outline);
+
+$color-border-base:    map-get($theme-base, border);
+$color-border-primary: map-get($theme-primary, border);
+$color-border-success: map-get($theme-success, border);
+$color-border-danger:  map-get($theme-danger, border);
+$color-border-warning: map-get($theme-warning, border);
+
+:export {
+
+  colorTextBase: $color-text-base;
+  colorTextBaseMuted: $color-text-base-muted;
+  colorTextBaseLabel: $color-text-base-label;
+  colorTextBaseDisabled: $color-text-base-disabled;
+  colorTextBasePlacehodler: $color-text-base-placeholder;
+
+  colorTextPrimary: $color-text-primary;
+  colorTextPrimaryMuted: $color-text-primary-muted;
+  colorTextPrimaryDisabled: $color-text-primary-disabled;
+  colorTextLink: $color-text-link;
+
+  colorTextSuccess: $color-text-success;
+  colorTextSuccessMuted: $color-text-success-muted;
+  colorTextSuccessDisabled: $color-text-success-disabled;
+
+  colorTextWarning: $color-text-warning;
+  colorTextWarningMuted: $color-text-warning-muted;
+  colorTextWarningDisabled: $color-text-warning-disabled;
+
+  colorBgBase100: $color-bg-base-100;
+  colorBgBase200: $color-bg-base-200;
+  colorBgBase300: $color-bg-base-300;
+
+  colorBgBase700: $color-bg-base-700;
+  colorBgBase800: $color-bg-base-800;
+  colorBgBase900: $color-bg-base-900;
+
+  colorBgPrimary100: $color-bg-primary-100;
+  colorBgPrimary200: $color-bg-primary-200;
+  colorBgPrimary300: $color-bg-primary-300;
+
+  colorBgPrimary700: $color-bg-primary-700;
+  colorBgPrimary800: $color-bg-primary-800;
+  colorBgPrimary900: $color-bg-primary-900;
+
+  colorBgSuccess100: $color-bg-success-100;
+  colorBgSuccess200: $color-bg-success-200;
+  colorBgSuccess300: $color-bg-success-300;
+
+  colorBgSuccess700: $color-bg-success-700;
+  colorBgSuccess800: $color-bg-success-800;
+  colorBgSuccess900: $color-bg-success-900;
+
+  colorBgDanger100: $color-bg-danger-100;
+  colorBgDanger200: $color-bg-danger-200;
+  colorBgDanger300: $color-bg-danger-300;
+
+  colorBgDanger700: $color-bg-danger-700;
+  colorBgDanger800: $color-bg-danger-800;
+  colorBgDanger900: $color-bg-danger-900;
+
+  colorBgWarning100: $color-bg-warning-100;
+  colorBgWarning200: $color-bg-warning-200;
+  colorBgWarning300: $color-bg-warning-300;
+
+  colorBgWarning700: $color-bg-warning-700;
+  colorBgWarning800: $color-bg-warning-800;
+  colorBgWarning900: $color-bg-warning-900;
+
+  colorLineBase: $color-line-base;
+  colorLinePrimary: $color-line-primary;
+  colorLineSuccess: $color-line-success;
+  colorLineDanger: $color-line-danger;
+  colorLineWarning: $color-line-warning;
+
+  colorBorderBase: $color-border-base;
+  colorBorderPrimary: $color-border-primary;
+  colorBorderSuccess: $color-border-success;
+  colorBorderDanger: $color-border-danger;
+  colorBorderWarning: $color-border-warning;
+
+}

@@ -1,0 +1,12 @@
+@import "src/styles/global";
+
+.H2 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: map-get($theme-base, textLabel);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid map-get($theme-base, border);
+}

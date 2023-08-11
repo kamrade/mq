@@ -1,7 +1,9 @@
+@import "src/styles/global";
+
 .Box {
   position: relative;
   padding: 1rem;
   border-radius: .5rem;
-  background-color: gray;
-  color: white;
+  background-color: $color-bg-base-100;
+  color: $color-text-base;
 }

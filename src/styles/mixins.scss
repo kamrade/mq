@@ -1,0 +1,7 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/mixins";
+
+
+@mixin transition($transition-property) {
+  transition: $transition-property $transition-time $transition-function;
+}

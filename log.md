@@ -2,16 +2,23 @@
 + Add sass
 + Setup absolute path (https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite)
 
-- setup Routes
++ Add Bootstrap
+    + Grid
+    + adaptive mixins
+    + themes system
+    + custom variables and mixins
+    -  
 
-- Add Bootstrap or Tailwind
++ setup Routes
++ ScrambledText
++ setup colors system
+
+- ProgressiveImage component
+
 - classnames
 - React icons
 - scss variables to js (check the Navigation component)
-- setup colors system
 - lodash
-- ProgressiveImage component
-- ScrambledText
 - Typography
 - Button
 - Gallery component
