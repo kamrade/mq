@@ -9,7 +9,7 @@ import NotFound from './NotFound.tsx'
 function App() {
 
   return (
-    <>
+    <div className={'pb-9'}>
 
       <Header />
 
@@ -26,7 +26,7 @@ function App() {
         <Box>Test box</Box>
       </div>
 
-    </>
+    </div>
   )
 }
 
