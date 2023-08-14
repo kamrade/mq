@@ -1,0 +1,23 @@
+@import "src/styles/global";
+
+.Accordion {
+  position: relative;
+
+  .AccordionToggler {
+    display: block;
+  }
+
+  .AccordionContentWrapper {
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px dashed $gray-200;
+  }
+
+  .AccordionContent {
+    display: block;
+  }
+
+  .AccordionContentItem {
+    display: block;
+  }
+}

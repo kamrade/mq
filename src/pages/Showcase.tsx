@@ -1,9 +1,13 @@
-import {H2} from "~/uikit";
+import { useRef } from 'react';
+import { Aside } from '~/pages/components';
 
 export default function Showcase() {
+
+  const refAside = useRef<HTMLDivElement>(null);
+
   return (
     <div>
-      <H2>Showcase</H2>
+      <Aside isShowing={true} ref={refAside} hide={() => console.log('hide aside')} />
     </div>
   );
 }

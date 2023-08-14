@@ -1,0 +1,43 @@
+@import "src/styles/global";
+
+$zIndexAside: 101;
+$zIndexAsideToggler: $zIndexAside + 1;
+$asideWidth: 18rem;
+
+:global {
+
+  .Aside {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    z-index: $zIndexAside;
+    width: $asideWidth;
+    background-color: $gray-100;
+    border-radius: $border-radius-block;
+    padding-top: 2.5rem;
+
+    &.AsideHiddenAnimate {
+      animation: 0.3s $transition-func-cubic 0s Aside-Slide-Out;
+    }
+
+    &.AsideHidden {
+      display: none;
+    }
+
+    &.AsideShowedAnimate {
+      animation: 0.3s $transition-func-cubic 0s Aside-Slide-In;
+    }
+
+  }
+
+}
+
+.AsideNavWrapper {
+  position: absolute;
+  top: 9.5rem;
+  left: 0;
+  right: 0.5rem;
+  bottom: 1rem;
+  overflow-y: scroll;
+}

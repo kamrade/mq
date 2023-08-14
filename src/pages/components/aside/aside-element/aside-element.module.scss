@@ -1,0 +1,17 @@
+@import "src/styles/global";
+
+.AsideElement {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: $border-radius;
+
+  &.AsideElementInteractive {
+    cursor: pointer;
+    user-select: none;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: darken($gray-100, 5%);
+    }
+  }
+}
