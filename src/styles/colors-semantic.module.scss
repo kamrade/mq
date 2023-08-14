@@ -24,7 +24,7 @@ $color-text-warning: map-get($theme-warning, textMain);
 $color-text-warning-muted: map-get($theme-warning, textMuted);
 $color-text-warning-disabled: map-get($theme-warning, textDisabled);
 
-// BACKGROUND
+// BACKGROUND • Base
 $color-bg-base-100: map-get($theme-base, bg100);
 $color-bg-base-200: map-get($theme-base, bg200);
 $color-bg-base-300: map-get($theme-base, bg300);
@@ -33,6 +33,7 @@ $color-bg-base-700: map-get($theme-base, bg700);
 $color-bg-base-800: map-get($theme-base, bg800);
 $color-bg-base-900: map-get($theme-base, bg900);
 
+// BACKGROUND • Primary
 $color-bg-primary-100: map-get($theme-primary, bg100);
 $color-bg-primary-200: map-get($theme-primary, bg200);
 $color-bg-primary-300: map-get($theme-primary, bg300);
@@ -41,6 +42,7 @@ $color-bg-primary-700: map-get($theme-primary, bg700);
 $color-bg-primary-800: map-get($theme-primary, bg800);
 $color-bg-primary-900: map-get($theme-primary, bg900);
 
+// BACKGROUND • Success
 $color-bg-success-100: map-get($theme-success, bg100);
 $color-bg-success-200: map-get($theme-success, bg200);
 $color-bg-success-300: map-get($theme-success, bg300);
@@ -49,6 +51,7 @@ $color-bg-success-700: map-get($theme-success, bg700);
 $color-bg-success-800: map-get($theme-success, bg800);
 $color-bg-success-900: map-get($theme-success, bg900);
 
+// BACKGROUND • Danger
 $color-bg-danger-100: map-get($theme-danger, bg100);
 $color-bg-danger-200: map-get($theme-danger, bg200);
 $color-bg-danger-300: map-get($theme-danger, bg300);
@@ -57,6 +60,7 @@ $color-bg-danger-700: map-get($theme-danger, bg700);
 $color-bg-danger-800: map-get($theme-danger, bg800);
 $color-bg-danger-900: map-get($theme-danger, bg900);
 
+// BACKGROUND • Warning
 $color-bg-warning-100: map-get($theme-warning, bg100);
 $color-bg-warning-200: map-get($theme-warning, bg200);
 $color-bg-warning-300: map-get($theme-warning, bg300);
@@ -65,7 +69,7 @@ $color-bg-warning-700: map-get($theme-warning, bg700);
 $color-bg-warning-800: map-get($theme-warning, bg800);
 $color-bg-warning-900: map-get($theme-warning, bg900);
 
-// LINEs
+// LINE
 $color-line-base:    map-get($theme-base, outline);
 $color-line-primary: map-get($theme-primary, outline);
 $color-line-success: map-get($theme-success, outline);
@@ -78,6 +82,7 @@ $color-border-success: map-get($theme-success, border);
 $color-border-danger:  map-get($theme-danger, border);
 $color-border-warning: map-get($theme-warning, border);
 
+// EXPORT for using in js/ts
 :export {
 
   colorTextBase: $color-text-base;

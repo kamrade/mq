@@ -40,3 +40,22 @@
   width: 100%;
   height: auto;
 }
+
+.loaderBlock :global {
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  font-size: 0.75rem;
+  animation: blinking ease-in 1s infinite;
+}
+
+.loaderContent {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: $border-radius;
+  display: inline-flex;
+}
+

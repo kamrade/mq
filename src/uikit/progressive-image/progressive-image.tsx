@@ -60,11 +60,19 @@ export const ProgressiveImage: React.FC<ProgressiveImageProps> = (props) => {
       />
 
       {description &&
-          <div className={s.description}>
-            {description}
-          </div>
+        <div className={s.description}>
+          {description}
+        </div>
       }
-      {loading && <div className='loaderBlock'><span>Loading...</span></div>}
+
+      { loading &&
+        <div className={s.loaderBlock}>
+          <div className={s.loaderContent}>
+            Loading...
+          </div>
+        </div>
+      }
+
     </div>
   );
 

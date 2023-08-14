@@ -1,0 +1,212 @@
+@use "sass:math";
+@import "src/styles/global";
+@import './button.mixins';
+
+.ButtonBase {
+  border-radius: $border-radius;
+  border: $buttonBorderSize solid transparent;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: $buttonPaddingSM-y $buttonPaddingSM-x;
+  background-color: transparent;
+  color: map-get($theme-base, text);
+  vertical-align: middle;
+  position: relative;
+  font-weight: 400;
+  @include transition(all);
+
+  &:not(:disabled):hover {
+    background-color: map-get($theme-base, bg200);
+  }
+
+  &:not(:disabled):active {
+    background-color: map-get($theme-base, bg300);
+  }
+
+  &:not(:disabled):focus {
+    box-shadow: $focus-shadow;
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+  }
+
+  // BLOCK
+  &.Block {
+    display: block;
+    width: 100%;
+  }
+
+  &.Bold {
+    font-weight: bold;
+  }
+
+  // Suffix / Prefix (Icons)
+  .buttonPrefix {
+    padding-right: .25em;
+    font-size: 1.2em;
+    line-height: 0;
+  }
+
+  .buttonSuffix {
+    padding-left: .25em;
+    font-size: 1.2em;
+    line-height: 0;
+  }
+
+  // Icon button
+  &.IconButton {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+
+    .buttonPrefix {
+      padding: 0;
+    }
+
+    &.XS {
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      margin: 0;
+    }
+    &.SM {
+      height: 30px;
+      width: 30px;
+      padding: 0;
+      margin: 0;
+    }
+    &.MD {
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      margin: 0;
+    }
+    &.LG {
+      height: 50px;
+      width: 50px;
+      padding: 0;
+      margin: 0;
+    }
+
+  }
+
+
+  // THEMES AND VARIANTS
+  &.Base {
+    @include btnTheming($theme-base);
+  }
+
+  &.Primary {
+    @include btnTheming($theme-primary);
+  }
+
+  &.Success {
+    @include btnTheming($theme-success);
+  }
+
+  &.Danger {
+    @include btnTheming($theme-danger);
+  }
+
+  &.Warning {
+    @include btnTheming($theme-warning);
+  }
+
+
+
+
+  // SIZE
+  &.XS {
+    @include btnSizeDraw($buttonPaddingXS-y, $buttonPaddingXS-x, $buttonInnerSpacingXS-x, $buttonFontSizeXS, $buttonLineHeightXS);
+    &.Wide {
+      padding: $buttonPaddingXS-y $buttonPaddingXS-x * 2;
+    }
+  }
+
+  &.SM {
+    @include btnSizeDraw($buttonPaddingSM-y, $buttonPaddingSM-x, $buttonInnerSpacingSM-x, $buttonFontSizeSM, $buttonLineHeightSM);
+    &.Wide {
+      padding: $buttonPaddingSM-y $buttonPaddingSM-x * 2;
+    }
+  }
+
+  &.MD {
+    @include btnSizeDraw($buttonPaddingMD-y, $buttonPaddingMD-x, $buttonInnerSpacingMD-x, $buttonFontSizeMD, $buttonLineHeightMD);
+    &.Wide {
+      padding: $buttonPaddingMD-y $buttonPaddingMD-x * 2;
+    }
+  }
+
+  &.LG {
+    @include btnSizeDraw($buttonPaddingLG-y, $buttonPaddingLG-x, $buttonInnerSpacingLG-x, $buttonFontSizeLG, $buttonLineHeightLG);
+    &.Wide {
+      padding: $buttonPaddingLG-y $buttonPaddingLG-x * 2;
+    }
+  }
+
+  &.Wide {
+    padding: $buttonPaddingSM-y $buttonPaddingSM-x * 2;
+  }
+
+  // SHAPE
+  &.Square {
+    border-radius: 0;
+  }
+
+  &.Circle {
+    border-radius: (2 * $buttonPaddingSM-y + $buttonLineHeightSM) / 2;
+
+    &.LG {
+      border-radius: (2 * $buttonPaddingLG-y + $buttonLineHeightLG) / 2;
+    }
+    &.MD {
+      border-radius: (2 * $buttonPaddingMD-y + $buttonLineHeightMD) / 2;
+    }
+    &.SM {
+      border-radius: (2 * $buttonPaddingSM-y + $buttonLineHeightSM) / 2;
+    }
+    &.XS {
+      border-radius: (2 * $buttonPaddingXS-y + $buttonLineHeightXS) / 2;
+    }
+
+
+  }
+
+  &.Loading {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background-color: inherit;
+    }
+
+    .preLoader {
+      position: absolute;
+      display: inline-flex;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      height: 1em;
+      width: 1em;
+
+      .preloaderAnimator :global {
+        display: inline-flex;
+        font-size: 1em;
+        line-height: 0;
+        animation: 3s linear infinite spin;
+        transform-origin: 50% 50%;
+      }
+    }
+
+  }
+}

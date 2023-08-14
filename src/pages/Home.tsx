@@ -1,4 +1,4 @@
-import { H2 } from '~/uikit';
+import { H2, Button } from '~/uikit';
 import { Link } from 'react-router-dom';
 import { portfolio } from "~/pages/portfolio/portfolio.ts";
 import { ProgressiveImage } from "~/uikit/progressive-image";
@@ -10,6 +10,11 @@ export default function Home() {
       <H2>Home</H2>
 
       <div className="row pb-5">
+
+        <div className="mb-3 d-flex gap-1">
+          <Button theme={'base'} variant={'light'}>Test 1</Button>
+          <Button theme={'base'} variant={'light'}>Test 2</Button>
+        </div>
 
         { portfolio.map((portfolioItem, i) => (
           <div className="col-lg-8" key={i}>

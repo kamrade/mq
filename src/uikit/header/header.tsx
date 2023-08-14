@@ -1,7 +1,6 @@
 import s from "./header.module.scss";
 import { NavLink } from "react-router-dom";
 import { ScrambledText} from "~/uikit/scrambled-text";
-// import colors from '../../styles/colors-semantic.module.scss';
 
 const navLinks = [
   { title: 'Home', href: '/' },
@@ -35,7 +34,7 @@ export function Header() {
           <div className={s.Menu}>
             { navLinks.map((link, i) => (
               <div key={i}>
-                <NavLink to={link.href} className={s.Link}>
+                <NavLink to={link.href} className={s.Link} >
                   {link.title}
                 </NavLink>
               </div>
