@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import { ScrambledText} from "~/uikit/scrambled-text";
 
 const navLinks = [
-  { title: 'Home', href: '/' },
-  { title: 'Contacts', href: '/contacts' },
-  { title: 'About', href: '/about'}
+  { title: 'Home', href: '/main/' },
+  { title: 'Contacts', href: '/main/contacts' },
+  { title: 'About', href: '/main/about'}
 ]
 
 export function Header() {

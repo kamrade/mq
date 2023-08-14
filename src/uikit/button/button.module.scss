@@ -158,19 +158,19 @@
   }
 
   &.Circle {
-    border-radius: (2 * $buttonPaddingSM-y + $buttonLineHeightSM) / 2;
+    border-radius: math.div((2 * $buttonPaddingSM-y + $buttonLineHeightSM), 2);
 
     &.LG {
-      border-radius: (2 * $buttonPaddingLG-y + $buttonLineHeightLG) / 2;
+      border-radius: math.div((2 * $buttonPaddingLG-y + $buttonLineHeightLG), 2);
     }
     &.MD {
-      border-radius: (2 * $buttonPaddingMD-y + $buttonLineHeightMD) / 2;
+      border-radius: math.div((2 * $buttonPaddingMD-y + $buttonLineHeightMD), 2);
     }
     &.SM {
-      border-radius: (2 * $buttonPaddingSM-y + $buttonLineHeightSM) / 2;
+      border-radius: math.div((2 * $buttonPaddingSM-y + $buttonLineHeightSM), 2);
     }
     &.XS {
-      border-radius: (2 * $buttonPaddingXS-y + $buttonLineHeightXS) / 2;
+      border-radius: math.div((2 * $buttonPaddingXS-y + $buttonLineHeightXS), 2);
     }
 
 

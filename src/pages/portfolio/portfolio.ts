@@ -86,7 +86,7 @@ export const portfolio: IPortfolioImage[] = [{
   alt: 'Showcase (design system)',
   interactive: true,
   description: 'Showcase design system (In progress)',
-  link: '/gallery/showcase',
+  link: '/showcase',
   name: 'showcase',
 }, {
   preview: unlimint_mobile_preview,
