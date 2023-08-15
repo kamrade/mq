@@ -1,9 +1,9 @@
-import React, { ReactChild, useState, useRef, useEffect } from 'react';
+import { ReactNode, useState, useRef, useEffect } from 'react';
 import s from './accordion.module.scss';
 import { quad, isObject, animate } from '~/utils';
 
 interface IAccordionProps {
-  children: ReactChild | AccordionNamedChildrenSlots;
+  children: ReactNode | AccordionNamedChildrenSlots;
   id: string; // using for identify accordion
   accordionState?: boolean; // using for control accordion from outside
   foldAll?: (id: string) => void;
@@ -11,8 +11,8 @@ interface IAccordionProps {
 }
 
 type AccordionNamedChildrenSlots = {
-  toggler: ReactChild,
-  content: ReactChild[]
+  toggler: ReactNode,
+  content: ReactNode[]
 }
 
 //--- OPTIONS
@@ -21,7 +21,7 @@ const accordionAnimationDuration = 120;
 export const Accordion = ({ children, accordionState, onChange, id, foldAll }: IAccordionProps) => {
 
   const [ isShowed, setIsShowed ] = useState<boolean>(false);
-  const refAccordionContent = useRef<HTMLDivElement>(null);
+  const refAccordionContent = useRef<HTMLDivElement | null>(null);
   const animationRef = useRef<number>(0);
   const [ animatedHeight, setAnimatedHeight] = useState<number>(0);
   const [ isAnimated, setIsAnimated ] = useState<boolean>(false);
@@ -91,7 +91,7 @@ export const Accordion = ({ children, accordionState, onChange, id, foldAll }: I
         <div className={s.AccordionContentWrapper} style={getWrapperStyles()}>
           <div ref={refAccordionContent} className={s.AccordionContent}>
             { content
-              ? content.map((item: ReactChild, i: number) =>
+              ? content.map((item: ReactNode, i: number) =>
                 <div key={i} className={s.AccordionContentItem}>
                   {item}
                 </div>)
@@ -109,6 +109,6 @@ export const Accordion = ({ children, accordionState, onChange, id, foldAll }: I
   );
 }
 
-export const isNamedSlots = (children: any): children is AccordionNamedChildrenSlots => {
+export const isNamedSlots = (children: ReactNode): children is AccordionNamedChildrenSlots => {
   return isObject(children) && 'content' in children;
 };
