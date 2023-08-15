@@ -6,7 +6,7 @@ import { ProgressiveImage } from "~/uikit/progressive-image";
 export default function Home() {
 
   return (
-    <div>
+    <div className={'container'}>
       <H2>Home</H2>
 
       <div className="row pb-5">

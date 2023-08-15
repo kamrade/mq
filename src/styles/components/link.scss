@@ -1,6 +1,7 @@
 a, a:visited, a:link {
   color: $gray-600;
   transition: $transition-base;
+  text-decoration: none;
 
   &:hover {
     color: $gray-700;

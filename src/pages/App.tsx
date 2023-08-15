@@ -13,7 +13,7 @@ function App() {
   return (
     <div className={'pb-9'}>
 
-      <div className={'container py-5 mb-3'}>
+      <div className={'mb-3'}>
         <Routes>
           <Route path={'/'} element={<Redirect path={'/main'}/>}></Route>
 

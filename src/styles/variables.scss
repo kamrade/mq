@@ -64,18 +64,22 @@ $buttonInnerSpacingLG-x: 0.375rem;
 $buttonFontSizeLG: 1.125rem;
 $buttonLineHeightLG: 1.625rem;
 
-
-
 $grid-columns: 24;
 $grid-gutter-width: 8px;
 $grid-row-columns: 6;
 
 $focus-shadow: 0 0 0 0.15rem rgba($primary, 0.2);
+
 $transition-time: .3s;
 $transition-function: ease-in-out;
 $transition-base: all $transition-time $transition-function;
-
-
-$border-radius: 6px;
-$border-radius-block: 12px;
 $transition-func-cubic: cubic-bezier(0.15, 0.5, 0.5, 1);
+
+$border-radius-0: 0;
+$border-radius-1: 2px;
+$border-radius-2: 5px;
+$border-radius-3: 8px;
+$border-radius-4: 12px;
+
+$border-radius: $border-radius-2;
+$border-radius-block: $border-radius-4;

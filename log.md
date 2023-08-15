@@ -20,9 +20,10 @@
 + lodash
 + React icons
 
-- Buttons
-- Aside
++ Buttons
++ Aside
 - Showcase
+- Add local scss variables
 
 
 - Typography

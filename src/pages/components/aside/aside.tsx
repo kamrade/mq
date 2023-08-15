@@ -19,9 +19,9 @@ export const Aside = React.forwardRef(({ isShowing }: IAsideProps, ref: Forwarde
 
   const asideClassNames = sx({
     Aside: true,
-    AsideHiddenAnimate: !isShowing,
+    AnimateHiding: !isShowing,
     AsideHidden: !isDisplaying,
-    AsideShowedAnimate: isShowing
+    AnimateShowing: isShowing
   });
 
   useEffect(() => {
@@ -38,6 +38,7 @@ export const Aside = React.forwardRef(({ isShowing }: IAsideProps, ref: Forwarde
 
   return (
     <aside ref={ref} className={asideClassNames} onAnimationEnd={ handleAnimationEnd }>
+
       {/*<UserBlock username="Dennis" companyName="Muzq" />*/}
 
       <div className={s.AsideNavWrapper}>

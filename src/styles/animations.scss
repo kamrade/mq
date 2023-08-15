@@ -1,18 +1,22 @@
 @keyframes Aside-Slide-Out {
   0% {
     transform: translateX(0);
+    opacity: 1;
   }
   100% {
     transform: translateX(-110%);
+    opacity: 0;
   }
 }
 
 @keyframes Aside-Slide-In {
   0% {
     transform: translateX(-110%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 

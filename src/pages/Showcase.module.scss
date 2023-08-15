@@ -1,0 +1,11 @@
+@import "src/styles/global";
+@import "src/pages/components/aside/aside.variables";
+
+.ShowcaseContent {
+  margin-left: $aside-width + 16px;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  background-color: $color-bg-base-100;
+  border-radius: $border-radius-block;
+  padding: 1rem;
+}
