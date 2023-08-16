@@ -1,6 +1,6 @@
 // Sidebar component
 
-import React, { useState, useEffect, ForwardedRef } from 'react';
+import { useState, useEffect, ForwardedRef, forwardRef } from 'react';
 import classNames from 'classnames/bind';
 import s from './Aside.module.scss';
 // import { UserBlock } from 'shared/UserBlock/UserBlock';
@@ -13,7 +13,7 @@ export interface IAsideProps {
   hide?: () => void;
 }
 
-export const Aside = React.forwardRef(({ isShowing }: IAsideProps, ref: ForwardedRef<HTMLDivElement>) => {
+export const Aside = forwardRef(({ isShowing }: IAsideProps, ref: ForwardedRef<HTMLDivElement>) => {
 
   const [ isDisplaying, setIsDisplaying ] = useState(true);
 

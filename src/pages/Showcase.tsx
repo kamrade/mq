@@ -13,8 +13,8 @@ export default function Showcase() {
   const [showAside, setShowAside] = useState(true);
   const [showAsideMemo, setShowAsideMemo] = useState(true);
 
-  const refAside = useRef<HTMLDivElement>(null);
-  const refAsideToggler = useRef<HTMLDivElement>(null);
+  const refAside = useRef<HTMLDivElement | null>(null);
+  const refAsideToggler = useRef<HTMLDivElement | null>(null);
 
   const size = useWindowSize(400);
 
@@ -25,7 +25,6 @@ export default function Showcase() {
   }, [showAside, size.width]);
 
   useOnClickOutside([refAside, refAsideToggler], () => {
-    console.log('hide aside on mobile device');
     setShowAside(false);
   }, (showAside && size.width < showAsideBreakpoint));
 
@@ -48,23 +47,29 @@ export default function Showcase() {
     }
   }
 
+  const getContentOffset = () => {
+    if (showAside && (size.width >= showAsideBreakpoint)) {
+      return {}
+    } else {
+      return {
+        marginLeft: '.5rem'
+      }
+    }
+  }
+
   return (
     <div style={{ position: 'relative' }}>
 
-      <div style={{
-        position: 'absolute',
-        zIndex: 999,
-        top: '.5rem',
-        left: '.5rem',
-        transform: `translateX(${showAside ? '1rem' : '0'})`,
-        transition: 'all .3s ease-in-out',
-      }}>
+      <div
+        className={s.AsideSwitcher}
+        style={{ transform: `translateX(${showAside ? '1rem' : '.5rem'})`}}
+      >
         <Button onClick={toggleAside} theme={'base'} variant={'text'} size={'md'} prefix={<RiMenuFill/>} iconButton />
       </div>
 
       <Aside isShowing={showAside} ref={refAside} hide={hideAsideIfMobile} />
 
-      <div className={s.ShowcaseContent}>
+      <div className={s.ShowcaseContent} style={getContentOffset()}>
         Base content
       </div>
 

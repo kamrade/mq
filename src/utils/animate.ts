@@ -1,12 +1,13 @@
 
 
-export const animate = ({timing, draw, duration, animationRef, onAnimationEnd}: any) => {
+export const animate = ({timing, draw, duration, animationRef, onAnimationEnd}) => {
   const start = performance.now();
   animationRef.current = requestAnimationFrame(function animate(time: number) {
 
     let timeFraction = (time - start) / duration;
     timeFraction = timeFraction > 1 ? 1 : timeFraction;
     const progress = timing(timeFraction); // progress === 1 means 100% completed.
+
     draw(progress);
 
     if (timeFraction < 1) { // if less than 1 - continue animation

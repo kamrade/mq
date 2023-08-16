@@ -72,8 +72,8 @@ $focus-shadow: 0 0 0 0.15rem rgba($primary, 0.2);
 
 $transition-time: .3s;
 $transition-function: ease-in-out;
-$transition-base: all $transition-time $transition-function;
 $transition-func-cubic: cubic-bezier(0.15, 0.5, 0.5, 1);
+$transition-base: all $transition-time $transition-function;
 
 $border-radius-0: 0;
 $border-radius-1: 2px;
