@@ -1,7 +1,13 @@
 import { RefObject, useEffect } from 'react';
 
-export const useOnClickOutside = (refs: RefObject<HTMLElement>[], handler: (event: MouseEvent | TouchEvent) => void, condition: boolean) => {
+export const useOnClickOutside = (
+  refs: RefObject<HTMLElement>[],
+  handler: (event: MouseEvent | TouchEvent) => void,
+  condition: boolean
+) => {
+
   useEffect(() => {
+
     if (condition) {
       const listener = (event: MouseEvent | TouchEvent) => {
 
@@ -11,7 +17,6 @@ export const useOnClickOutside = (refs: RefObject<HTMLElement>[], handler: (even
             return;
           }
         }
-
         handler(event);
       }
 
@@ -25,4 +30,5 @@ export const useOnClickOutside = (refs: RefObject<HTMLElement>[], handler: (even
     }
 
   }, [refs, handler, condition]);
+
 }

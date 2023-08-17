@@ -22,10 +22,10 @@
 
 + Buttons
 + Aside
-- Showcase
+- Showcase pages
+- Floating button global menu
+
 - Add local scss variables
-
-
 - Typography
 - Gallery component
 - Local scss variables (which can be reassigned if using outside of the design system)

@@ -14,7 +14,7 @@ export default function Showcase() {
   const [showAsideMemo, setShowAsideMemo] = useState(true);
 
   const refAside = useRef<HTMLDivElement | null>(null);
-  const refAsideToggler = useRef<HTMLDivElement | null>(null);
+  const refAsideSwitcher = useRef<HTMLDivElement | null>(null);
 
   const size = useWindowSize(400);
 
@@ -24,7 +24,7 @@ export default function Showcase() {
     }
   }, [showAside, size.width]);
 
-  useOnClickOutside([refAside, refAsideToggler], () => {
+  useOnClickOutside([refAside, refAsideSwitcher], () => {
     setShowAside(false);
   }, (showAside && size.width < showAsideBreakpoint));
 
@@ -61,6 +61,7 @@ export default function Showcase() {
     <div style={{ position: 'relative' }}>
 
       <div
+        ref={refAsideSwitcher}
         className={s.AsideSwitcher}
         style={{ transform: `translateX(${showAside ? '1rem' : '.5rem'})`}}
       >
