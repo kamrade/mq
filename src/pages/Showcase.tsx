@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { Outlet } from "react-router-dom";
 import { Aside } from '~/pages/components';
 import { Button } from '~/uikit';
 import { useWindowSize, useOnClickOutside } from "~/utils";
@@ -76,7 +77,7 @@ export default function Showcase() {
       />
 
       <div className={s.ShowcaseContent} style={getContentOffset()}>
-        Base content
+        <Outlet />
       </div>
 
 

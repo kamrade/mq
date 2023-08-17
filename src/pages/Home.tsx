@@ -1,7 +1,6 @@
-import { H2, Button } from '~/uikit';
+import { H2, Button, ProgressiveImage } from '~/uikit';
 import { Link } from 'react-router-dom';
 import { portfolio } from "~/pages/portfolio/portfolio.ts";
-import { ProgressiveImage } from "~/uikit/progressive-image";
 
 export default function Home() {
 
