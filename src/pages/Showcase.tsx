@@ -68,7 +68,12 @@ export default function Showcase() {
         <Button onClick={toggleAside} theme={'base'} variant={'text'} size={'md'} prefix={<RiMenuFill/>} iconButton />
       </div>
 
-      <Aside isShowing={showAside} ref={refAside} hide={hideAsideIfMobile} />
+      <Aside
+        isMobile={size.width < showAsideBreakpoint}
+        isShowing={showAside}
+        ref={refAside}
+        hide={hideAsideIfMobile}
+      />
 
       <div className={s.ShowcaseContent} style={getContentOffset()}>
         Base content

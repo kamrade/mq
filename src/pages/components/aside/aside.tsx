@@ -10,10 +10,11 @@ const sx = classNames.bind(s);
 
 export interface IAsideProps {
   isShowing: boolean;
+  isMobile?: boolean;
   hide?: () => void;
 }
 
-export const Aside = forwardRef(({ isShowing }: IAsideProps, ref: ForwardedRef<HTMLDivElement>) => {
+export const Aside = forwardRef(({ isShowing, isMobile }: IAsideProps, ref: ForwardedRef<HTMLDivElement>) => {
 
   const [ isDisplaying, setIsDisplaying ] = useState(true);
 
@@ -21,7 +22,8 @@ export const Aside = forwardRef(({ isShowing }: IAsideProps, ref: ForwardedRef<H
     Aside: true,
     AnimateHiding: !isShowing,
     AsideHidden: !isDisplaying,
-    AnimateShowing: isShowing
+    AnimateShowing: isShowing,
+    AsidePopup: isMobile,
   });
 
   useEffect(() => {
