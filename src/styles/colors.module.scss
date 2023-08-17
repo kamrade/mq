@@ -9,6 +9,8 @@ $gray-600: #8D959C;
 $gray-700: #747C84;
 $gray-800: #5C6368;
 $gray-900: #303336;
+$gray-910: #232426;
+$gray-920: #161717;
 $black: #000;
 
 // PALETTE
@@ -23,6 +25,8 @@ $colors: (
   gray-700: $gray-700,
   gray-800: $gray-800,
   gray-900: $gray-900,
+  gray-910: $gray-910,
+  gray-920: $gray-920,
   black: $black,
 
   blue-100: #EFF0FF,
@@ -72,9 +76,9 @@ $theme-base: (
   bg200:   map-get($colors, gray-200),
   bg300:   map-get($colors, gray-300),
 
-  bg700:   map-get($colors, gray-700),
-  bg800:   map-get($colors, gray-800),
-  bg900:   map-get($colors, gray-900),
+  bg700:   map-get($colors, gray-900),
+  bg800:   map-get($colors, gray-910),
+  bg900:   map-get($colors, gray-920),
 
   textMain:         map-get($colors, gray-900),
   textLabel:        map-get($colors, gray-700),

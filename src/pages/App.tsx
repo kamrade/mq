@@ -14,6 +14,8 @@ import GridPage from './showcase/Grid.tsx';
 import SpacersPage from './showcase/Spacers.tsx';
 import LineChartPage from './showcase/LineChart.tsx';
 
+import { TabBar } from '~/pages/components/TabBar/TabBar.tsx'
+
 function App() {
 
   return (
@@ -42,7 +44,7 @@ function App() {
         </Routes>
       </div>
 
-
+      <TabBar />
 
     </div>
   )

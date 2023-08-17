@@ -1,0 +1,21 @@
+@import "src/styles/global";
+
+.TabBar {
+  position: fixed;
+  z-index: $zindex-fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.TabBarSwitcher {
+  width: 80px;
+  height: 80px;
+  background: $color-bg-base-700;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    background: $color-bg-base-800;
+  }
+}

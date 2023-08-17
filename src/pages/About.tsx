@@ -1,4 +1,4 @@
-import {H2} from "~/uikit";
+import { H2 } from "~/uikit";
 
 export default function About() {
   return (
